@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Project Name="UnityLua.luaprj" >
+    <Filter Name="View" >
+        <LuaFile RelativePath=".\..\View\MessagePanel.lua" />
+        <LuaFile RelativePath=".\..\View\PromptPanel.lua" />
+    </Filter>
+    <Filter Name="LuaFramework" >
+        <Filter Name="Editor" />
+        <Filter Name="Examples" >
+            <Filter Name="Builds" >
+                <Filter Name="Message" />
+                <Filter Name="Prompt" />
+            </Filter>
+            <Filter Name="Textures" >
+                <Filter Name="Prompt" />
+                <Filter Name="Shared" />
+            </Filter>
+        </Filter>
+        <Filter Name="Lua" >
+            <LuaFile RelativePath=".\..\eventlib.lua" />
+            <LuaFile RelativePath=".\..\events.lua" />
+            <LuaFile RelativePath=".\..\Main.lua" />
+            <Filter Name="3rd" >
+                <Filter Name="cjson" >
+                    <LuaFile RelativePath=".\..\3rd\cjson\json2lua.lua" />
+                    <LuaFile RelativePath=".\..\3rd\cjson\lua2json.lua" />
+                    <LuaFile RelativePath=".\..\3rd\cjson\test.lua" />
+                    <LuaFile RelativePath=".\..\3rd\cjson\util.lua" />
+                </Filter>
+                <Filter Name="luabitop" >
+                    <LuaFile RelativePath=".\..\3rd\luabitop\bitbench.lua" />
+                    <LuaFile RelativePath=".\..\3rd\luabitop\bittest.lua" />
+                    <LuaFile RelativePath=".\..\3rd\luabitop\installpath.lua" />
+                    <LuaFile RelativePath=".\..\3rd\luabitop\md5test.lua" />
+                    <LuaFile RelativePath=".\..\3rd\luabitop\nsievebits.lua" />
+                    <Filter Name="doc" >
+                        <Filter Name="img" />
+                    </Filter>
+                </Filter>
+                <Filter Name="pbc" >
+                    <LuaFile RelativePath=".\..\3rd\pbc\parser.lua" />
+                    <LuaFile RelativePath=".\..\3rd\pbc\protobuf.lua" />
+                    <LuaFile RelativePath=".\..\3rd\pbc\test.lua" />
+                    <LuaFile RelativePath=".\..\3rd\pbc\test2.lua" />
+                    <LuaFile RelativePath=".\..\3rd\pbc\testparser.lua" />
+                </Filter>
+                <Filter Name="pblua" >
+                    <LuaFile RelativePath=".\..\3rd\pblua\login_pb.lua" />
+                    <LuaFile RelativePath=".\..\3rd\pblua\person_pb.lua" />
+                </Filter>
+                <Filter Name="sproto" >
+                    <LuaFile RelativePath=".\..\3rd\sproto\print_r.lua" />
+                    <LuaFile RelativePath=".\..\3rd\sproto\sproto.lua" />
+                    <LuaFile RelativePath=".\..\3rd\sproto\sprotoparser.lua" />
+                    <LuaFile RelativePath=".\..\3rd\sproto\test.lua" />
+                    <LuaFile RelativePath=".\..\3rd\sproto\testall.lua" />
+                    <LuaFile RelativePath=".\..\3rd\sproto\testrpc.lua" />
+                </Filter>
+            </Filter>
+            <Filter Name="Common" >
+                <LuaFile RelativePath=".\..\Common\define.lua" />
+                <LuaFile RelativePath=".\..\Common\functions.lua" />
+                <LuaFile RelativePath=".\..\Common\protocal.lua" />
+            </Filter>
+            <Filter Name="Controller" >
+                <LuaFile RelativePath=".\..\Controller\MessageCtrl.lua" />
+                <LuaFile RelativePath=".\..\Controller\PromptCtrl.lua" />
+            </Filter>
+            <Filter Name="Logic" >
+                <LuaFile RelativePath=".\..\Logic\CtrlManager.lua" />
+                <LuaFile RelativePath=".\..\Logic\Game.lua" />
+                <LuaFile RelativePath=".\..\Logic\LuaClass.lua" />
+                <LuaFile RelativePath=".\..\Logic\Network.lua" />
+            </Filter>
+            <Filter Name="UnityLua" />
+            <Filter Name="View" >
+                <LuaFile RelativePath=".\..\View\MessagePanel.lua" />
+                <LuaFile RelativePath=".\..\View\PromptPanel.lua" />
+            </Filter>
+        </Filter>
+        <Filter Name="Resources" />
+        <Filter Name="Scenes" />
+        <Filter Name="Scripts" >
+            <Filter Name="Common" />
+            <Filter Name="ConstDefine" />
+            <Filter Name="Controller" >
+                <Filter Name="Command" />
+            </Filter>
+            <Filter Name="Framework" >
+                <Filter Name="Core" />
+                <Filter Name="Interfaces" />
+            </Filter>
+            <Filter Name="Manager" >
+                <Filter Name="Interface" />
+            </Filter>
+            <Filter Name="Network" />
+            <Filter Name="ObjectPool" />
+            <Filter Name="Utility" />
+            <Filter Name="View" />
+        </Filter>
+        <Filter Name="ToLua" >
+            <Filter Name="BaseType" />
+            <Filter Name="Core" />
+            <Filter Name="Editor" >
+                <Filter Name="Extend" />
+            </Filter>
+            <Filter Name="Examples" >
+                <Filter Name="01_HelloWorld" />
+                <Filter Name="02_ScriptsFromFile" >
+                    <LuaFile RelativePath=".\..\..\ToLua\Examples\02_ScriptsFromFile\ScriptsFromFile.lua" />
+                </Filter>
+                <Filter Name="03_CallLuaFunction" />
+                <Filter Name="04_AccessingLuaVariables" />
+                <Filter Name="05_LuaCoroutine" />
+                <Filter Name="06_LuaCoroutine2" />
+                <Filter Name="07_LuaThread" />
+                <Filter Name="08_AccessingArray" />
+                <Filter Name="09_Dictionary" />
+                <Filter Name="10_Enum" />
+                <Filter Name="11_Delegate" />
+                <Filter Name="12_GameObject" />
+                <Filter Name="13_CustomLoader" >
+                    <Filter Name="Resources" >
+                        <Filter Name="Lua" />
+                    </Filter>
+                </Filter>
+                <Filter Name="14_Out" />
+                <Filter Name="15_ProtoBuffer" />
+                <Filter Name="16_Int64" />
+                <Filter Name="17_Inherit" />
+                <Filter Name="18_Bundle" />
+                <Filter Name="19_cjson" />
+                <Filter Name="20_utf8" />
+                <Filter Name="21_String" />
+                <Filter Name="22_Reflection" />
+                <Filter Name="23_List" />
+                <Filter Name="Performance" />
+                <Filter Name="Resources" >
+                    <Filter Name="Lua" >
+                        <Filter Name="Protol" />
+                    </Filter>
+                </Filter>
+                <Filter Name="TestErrorStack" />
+                <Filter Name="TestOverload" />
+            </Filter>
+            <Filter Name="Lua" >
+                <LuaFile RelativePath=".\..\..\ToLua\Lua\event.lua" />
+                <LuaFile RelativePath=".\..\..\ToLua\Lua\list.lua" />
+                <LuaFile RelativePath=".\..\..\ToLua\Lua\ltn12.lua" />
+                <LuaFile RelativePath=".\..\..\ToLua\Lua\mime.lua" />
+                <LuaFile RelativePath=".\..\..\ToLua\Lua\slot.lua" />
+                <LuaFile RelativePath=".\..\..\ToLua\Lua\socket.lua" />
+                <LuaFile RelativePath=".\..\..\ToLua\Lua\tolua.lua" />
+                <LuaFile RelativePath=".\..\..\ToLua\Lua\typeof.lua" />
+                <Filter Name="cjson" >
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\cjson\util.lua" />
+                </Filter>
+                <Filter Name="lpeg" >
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\lpeg\re.lua" />
+                </Filter>
+                <Filter Name="misc" >
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\misc\functions.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\misc\misc.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\misc\strict.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\misc\utf8.lua" />
+                </Filter>
+                <Filter Name="protobuf" >
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\protobuf\containers.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\protobuf\decoder.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\protobuf\descriptor.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\protobuf\encoder.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\protobuf\listener.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\protobuf\protobuf.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\protobuf\text_format.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\protobuf\type_checkers.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\protobuf\wire_format.lua" />
+                </Filter>
+                <Filter Name="socket" >
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\socket\ftp.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\socket\headers.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\socket\http.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\socket\mbox.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\socket\smtp.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\socket\tp.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\socket\url.lua" />
+                </Filter>
+                <Filter Name="System" >
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\System\coroutine.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\System\Timer.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\System\ValueType.lua" />
+                    <Filter Name="Reflection" >
+                        <LuaFile RelativePath=".\..\..\ToLua\Lua\System\Reflection\BindingFlags.lua" />
+                    </Filter>
+                </Filter>
+                <Filter Name="UnityEngine" >
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Bounds.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Color.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\LayerMask.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Mathf.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Plane.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Quaternion.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Ray.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\RaycastHit.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Time.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Touch.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Vector2.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Vector3.lua" />
+                    <LuaFile RelativePath=".\..\..\ToLua\Lua\UnityEngine\Vector4.lua" />
+                </Filter>
+            </Filter>
+            <Filter Name="Misc" />
+            <Filter Name="Reflection" />
+            <Filter Name="Source" >
+                <Filter Name="Generate" />
+            </Filter>
+        </Filter>
+    </Filter>
+</Project>
