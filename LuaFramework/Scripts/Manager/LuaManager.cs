@@ -17,7 +17,7 @@ namespace LuaFramework {
             {
                 if (_inst == null)
                 {
-                    GameObject go = new GameObject("[ScheduleManager]");
+                    GameObject go = new GameObject("[LuaManager]");
                     return go.AddComponent<LuaManager>();
                 }
                 return _inst;
@@ -78,7 +78,7 @@ namespace LuaFramework {
         }
 
         void StartMain() {
-            luaState.DoFile("GameEntrance.lua");
+            luaState.Require("GameEntrance");
 
             LuaFunction main = luaState.GetFunction("GameEnter");
             main.Call();
@@ -142,6 +142,20 @@ namespace LuaFramework {
         public object[] DoFile(string filename) {
             return luaState.DoFile(filename);
         }
+
+        public void Require(string filename)
+        {
+            luaState.Require(filename);
+        }
+
+        public LuaState GetState()
+        {
+            return luaState;
+        }
+        public LuaState GetLuaState()
+        {
+            return luaState;
+        }
 		public object[] DoString(string chunk, string chunkName)
 		{
 			return luaState.DoString(chunk, chunkName);
@@ -151,6 +165,10 @@ namespace LuaFramework {
             LuaFunction func = luaState.GetFunction(funcName);
             if (func != null) {
                 return func.Call(args);
+            }
+            else
+            {
+                Debug.LogWarning("没有找到函数：" + funcName);
             }
             return null;
         }

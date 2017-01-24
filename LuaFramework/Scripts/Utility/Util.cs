@@ -345,9 +345,7 @@ namespace LuaFramework {
         /// 执行Lua方法
         /// </summary>
         public static object[] CallMethod(string module, string func, params object[] args) {
-			LuaManager luaMgr = Main.luaManager;
-            if (luaMgr == null) return null;
-            return luaMgr.CallFunction(module + "." + func, args);
+            return LuaManager.inst.CallFunction(module + "." + func, args);
         }
 
                 /// <summary>

@@ -1,3 +1,4 @@
+require "BaseClass"
 function GameEnter()					
 	--local uiGo = UnityEngine.GameObject.Find('Canvas');
 	--Util.AddLuaComponent(uiGo, UILogic);

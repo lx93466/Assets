@@ -92,7 +92,7 @@ public class LuaFramework_LuaBehaviourWrap
 	{
 		try
 		{
-			LuaDLL.lua_pushstring(L, LuaFramework.LuaBehaviour.luaComponent);
+			LuaDLL.lua_pushstring(L, LuaFramework.LuaBehaviour.sLuaComponentName);
 			return 1;
 		}
 		catch(Exception e)
@@ -129,7 +129,7 @@ public class LuaFramework_LuaBehaviourWrap
 		{
 			o = ToLua.ToObject(L, 1);
 			LuaFramework.LuaBehaviour obj = (LuaFramework.LuaBehaviour)o;
-			LuaInterface.LuaTable ret = obj.luaComponentInst;
+			LuaInterface.LuaTable ret = obj.luaComponentTableInst;
 			ToLua.Push(L, ret);
 			return 1;
 		}
@@ -145,7 +145,7 @@ public class LuaFramework_LuaBehaviourWrap
 		try
 		{
 			string arg0 = ToLua.CheckString(L, 2);
-			LuaFramework.LuaBehaviour.luaComponent = arg0;
+			LuaFramework.LuaBehaviour.sLuaComponentName = arg0;
 			return 0;
 		}
 		catch(Exception e)
@@ -183,7 +183,7 @@ public class LuaFramework_LuaBehaviourWrap
 			o = ToLua.ToObject(L, 1);
 			LuaFramework.LuaBehaviour obj = (LuaFramework.LuaBehaviour)o;
 			LuaTable arg0 = ToLua.CheckLuaTable(L, 2);
-			obj.luaComponentInst = arg0;
+			obj.luaComponentTableInst = arg0;
 			return 0;
 		}
 		catch(Exception e)

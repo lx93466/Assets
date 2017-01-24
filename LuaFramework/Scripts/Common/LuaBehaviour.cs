@@ -10,20 +10,50 @@ namespace LuaFramework {
         private string data = null;
         private Dictionary<string, LuaFunction> buttons = new Dictionary<string, LuaFunction>();
 
-        public static string luaComponent = "";
+        public static string sLuaComponentName = "";
 
         public string luaComponentName = "";
 
-        public LuaTable luaComponentInst = null;
+        public LuaTable luaComponentTableInst = null;
         protected void Awake() {
-           // luaComponentName = luaComponent;
-            Main.luaManager.DoFile(luaComponentName);
-			LuaManager.inst.AddArgToLua ("gameObject", gameObject);
-            Util.CallMethod(luaComponentName, "Awake");
+            if (!string.IsNullOrEmpty(sLuaComponentName))
+            {
+                luaComponentName = sLuaComponentName;
+                sLuaComponentName = "";
+            }
+            else if(string.IsNullOrEmpty(luaComponentName))
+            {
+                luaComponentName = name;
+            }
+   
+            LuaManager.inst.Require(luaComponentName);
+            LuaTable classType = LuaManager.inst.GetTable(luaComponentName);
+            if (classType == null) return;
+
+            LuaFunction classNew = classType.GetLuaFunction("New");
+            if (classNew == null) return;
+          
+            object[] rets = classNew.Call(classType, gameObject);
+            if (rets.Length != 1) return;
+
+            luaComponentTableInst = (LuaTable)rets[0];
+     //       luaComponentTableInst["gameObject"] = gameObject;
+
+            LuaFunction awakeFun = luaComponentTableInst.GetLuaFunction("Awake");
+            if (awakeFun != null)
+            {
+                awakeFun.Call(luaComponentTableInst);
+            }
         }
 
         protected void Start() {
-            Util.CallMethod(luaComponentName, "Start");
+            if (luaComponentTableInst == null) return;
+            LuaFunction startFun = luaComponentTableInst.GetLuaFunction("Start");
+            if (startFun != null)
+            {
+                startFun.Call(luaComponentTableInst);
+            }
+          //  Util.CallMethod(luaComponentName, "Start");
         }
 
         protected void OnClick() {

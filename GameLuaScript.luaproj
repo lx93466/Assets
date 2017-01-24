@@ -25,6 +25,7 @@
     <Folder Include="GameLuaScript\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameLuaScript\BaseClass.lua" />
     <Compile Include="GameLuaScript\GameEntrance.lua" />
     <Compile Include="GameLuaScript\Login.lua" />
   </ItemGroup>
